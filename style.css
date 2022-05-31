@@ -12,7 +12,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #ffffff;
 }
+
+/* ------------------->  Classes <----------------------- */
+.underline
+{
+    width: 200px;
+    height: 2px;
+    margin: 13px auto;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
 
 /* ------------> signUpPage background container <--------------- */ 
 #container
@@ -41,7 +53,7 @@
 
 #logo h1
 {
-    color: white;
+    /* color: #ffffff; */
     font-size: 2.3rem;
     /* font-family: 'Kanit', sans-serif; */
     /* font-family: 'Acme', sans-serif; */
@@ -54,11 +66,12 @@
 
 #signUpArea
 {
-    height: 70vh;
+    display: none;
+    height: 650px;
     width: 30vw;
     position: absolute;
     left: calc(50% - 30vw/2);
-    top: calc(50% - 70vh/2);
+    top: calc(50% - 650px/2);
     text-align: center;
 
     /* glassMorphism */
@@ -82,18 +95,19 @@
 #signUpHeading
 {
     margin-top: 50px;
+    letter-spacing: 2px;
 }
 
 /* ------------------> Input field's CSS <-----------------------*/
 
-#signUpForm input
+#signUpForm input,#signUpForm button
 {
     margin: 20px 0px;
     height: 50px;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid #919191;
     border-radius: 10px;
-    color: #ffffff;
+    /* color: #ffffff; */
     padding: 0px 20px 0px 20px;
 }
 
@@ -114,3 +128,58 @@ input[type="date"]::-webkit-calendar-picker-indicator
     filter: invert(1);
 }
 
+#signUpForm button
+{
+    width: 40%;
+    margin: 40px auto;
+}
+
+/* ----------------------> Avatar Page <-------------------------- */
+#avatarPage
+{
+    position: absolute;
+    width: 50vw;
+    left: calc(50% - 50vw/2);
+    height: 750px;
+    top: calc(50% - 750px/2.2);
+
+    background: rgba(173, 171, 244, 0.2);
+    border-width: 1px 0px 0px 1px;
+    border-style: solid;
+    border-color: #404277;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(25px);
+    border-radius: 15px;
+}
+
+/* ----------------> Back Arrow <------------------- */
+#backArrow
+{
+    position: absolute;
+    top: 18px;
+    left: 18px;
+}
+
+#backArrow i
+{
+    font-size: 30px;
+}
+
+/* ------------------------> Done button <----------------- */
+#avatarPage button
+{
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    padding: 10px;
+    border-radius: 100%;
+    border: none;
+    background: #08B624;
+}
+
+#avatarPage button i
+{
+    font-size: 35px;
+}

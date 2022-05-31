@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notify</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c2e297d169.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -16,14 +17,25 @@
 
         <div id="signUpArea">
             <h1 id="signUpHeading">Sign Up.</h1>
+            <div class="underline"></div>
             <form id="signUpForm">
                 <input type="text" name="name" id="name" placeholder="Name">
+                <!-- For date input on blur if value is null then it becomes text input and on focus it becomes date input -->
                 <input type="text" onfocus="(this.type = 'date')" onblur="if(!this.value) this.type = 'text'" name="dob" id="dob" placeholder="DOB">
                 <input type="email" name="email" id="email" placeholder="Email">
                 <input type="password" name="password" id="password" placeholder="Password">
-
+                <button type="submit">Let's Keep...!!</button>
 
             </form>
+        </div>
+
+        <div id="avatarPage">
+            <div id="backArrow">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <button type="submit">
+                <i class="fa-solid fa-check"></i>
+            </button>
         </div>
     </div>
 
