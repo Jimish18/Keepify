@@ -142,6 +142,7 @@ input[type="date"]::-webkit-calendar-picker-indicator
     left: calc(50% - 50vw/2);
     height: 750px;
     top: calc(50% - 750px/2.2);
+    text-align: center;
 
     background: rgba(173, 171, 244, 0.2);
     border-width: 1px 0px 0px 1px;
@@ -182,4 +183,22 @@ input[type="date"]::-webkit-calendar-picker-indicator
 #avatarPage button i
 {
     font-size: 35px;
+}
+
+/* ------------> Avatar Heading <---------------- */
+#avatarHeading
+{
+    margin-top: 30px;
+    letter-spacing: 1.5px;
+}
+
+/* ----------------> Selected Avatar Detail <-------------- */
+#selectedAvatarDetail
+{
+    margin: 30px 0 0 0;
+}
+
+#selectedAvatarDetail h2
+{
+    margin: 10px 0 0 0;
 }
