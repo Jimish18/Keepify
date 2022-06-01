@@ -25,6 +25,33 @@
     background: #ffffff;
 }
 
+.sectionLine
+{
+    height: 50%;
+    width: 3px;
+    position: absolute;
+    background: #ffffff;
+    border-radius: 20px;
+    top: calc(50% - 50%/10);
+    right: calc(50% - 3px/2);
+}
+
+.avatarSection
+{
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.imgSize
+{
+    height: 120px;
+    width: 120px;
+    margin: auto;
+}
 
 /* ------------> signUpPage background container <--------------- */ 
 #container
@@ -201,4 +228,19 @@ input[type="date"]::-webkit-calendar-picker-indicator
 #selectedAvatarDetail h2
 {
     margin: 10px 0 0 0;
+}
+
+/* -------------> Avatar Container <------------------- */
+#avatarContainer
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    width: 100%;
+}
+
+#lowerArea
+{
+    display: flex;
+    height: 60%;
 }
