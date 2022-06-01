@@ -5,6 +5,14 @@ let avatarPage = document.getElementById("avatarPage");
 let signUpArea = document.getElementById("signUpArea");
 let backArrow = document.getElementById("backArrow");
 
+
+let userName = document.getElementById("name");
+let dob = document.getElementById("dob");
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+
+let avatarName = document.getElementById("avatarName");
+
 moveToAvatar.addEventListener("click",(e)=>
 {
     if(avatarPage.classList.contains("classAvatarOut") || signUpArea.classList.contains("classSignUpPageIn"))
@@ -17,6 +25,9 @@ moveToAvatar.addEventListener("click",(e)=>
 
     avatarPage.classList.add(`classAvatarIn`);
     signUpArea.classList.add(`classSignUpPageOut`);
+
+    console.log(userName.value + " " + dob.value + " " + email.value + " " + password.value);
+    avatarName.innerHTML = userName.value;
     e.preventDefault();
 })
 
