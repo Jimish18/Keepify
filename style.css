@@ -93,7 +93,7 @@
 
 #signUpArea
 {
-    display: none;
+    /* display: none; */
     height: 650px;
     width: 30vw;
     position: absolute;
@@ -164,11 +164,13 @@ input[type="date"]::-webkit-calendar-picker-indicator
 /* ----------------------> Avatar Page <-------------------------- */
 #avatarPage
 {
+    /* display: none; */
     position: absolute;
     width: 50vw;
     left: calc(50% - 50vw/2);
     height: 750px;
-    top: calc(50% - 750px/2.2);
+    /* top: calc(50% - 750px/2.2); */
+    top: 100%;
     text-align: center;
 
     background: rgba(173, 171, 244, 0.2);
@@ -243,4 +245,116 @@ input[type="date"]::-webkit-calendar-picker-indicator
 {
     display: flex;
     height: 60%;
+}
+
+/* --------------> Animation Classes <---------------- */
+
+.animationDetail
+{
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: forwards; 
+}
+
+.classAvatarIn
+{
+    animation-name: avatarIn;
+}
+
+.classAvatarOut
+{
+    animation-name: avatarOut;
+}
+
+.classSignUpPageIn
+{
+    animation-name: signUpPageIn;
+}
+
+.classSignUpPageOut
+{
+    animation-name: signUpPageOut;
+}
+
+/* -----------------> Animations <---------------- */
+
+@keyframes avatarIn
+{
+    0%
+    {
+        top: 80%;
+    }
+    /* 33%
+    {
+        top: 60%;
+    }
+    66%
+    {
+        top: 50%;
+    } */
+    100%
+    {
+        top: calc(50% - 750px/2.2);
+    }
+}
+
+@keyframes avatarOut
+{
+    0%
+    {
+        top: 20%;
+    }
+    /* 33%
+    {
+        top: 60%;
+    }
+    66%
+    {
+        top: 80%;
+    } */
+    100%
+    {
+        top:100%;
+    }
+}
+
+@keyframes signUpPageIn
+{
+    0%
+    {
+        top: -100%;
+    }
+    /* 33%
+    {
+        top: 0%;
+    }
+    66%
+    {
+        top: 10%;
+    } */
+    100%
+    {
+        top:calc(50% - 650px/2);
+    }
+}
+
+@keyframes signUpPageOut
+{
+    0%
+    {
+        top: 0%;
+    }
+    /* 33%
+    {
+        top: 0%;
+    }
+    66%
+    {
+        top: -50%;
+    } */
+    100%
+    {
+        top: -100%;
+    }
 }

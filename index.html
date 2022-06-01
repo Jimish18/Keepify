@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notify</title>
+    <title>Keepify</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c2e297d169.js" crossorigin="anonymous"></script>
 </head>
@@ -15,7 +15,7 @@
             <h1>Keepify</h1>
         </div>
 
-        <div id="signUpArea">
+        <div id="signUpArea" class="animationDetail">
             <h1 id="signUpHeading">Sign Up.</h1>
             <div class="underline"></div>
             <form id="signUpForm">
@@ -24,12 +24,12 @@
                 <input type="text" onfocus="(this.type = 'date')" onblur="if(!this.value) this.type = 'text'" name="dob" id="dob" placeholder="DOB">
                 <input type="email" name="email" id="email" placeholder="Email">
                 <input type="password" name="password" id="password" placeholder="Password">
-                <button type="submit">Let's Keep...!!</button>
+                <button type="submit" id="moveToAvatar">Let's Keep...!!</button>
 
             </form>
         </div>
 
-        <div id="avatarPage">
+        <div id="avatarPage" class="animationDetail">
             <div id="backArrow">
                 <i class="fa-solid fa-arrow-left"></i>
             </div>
