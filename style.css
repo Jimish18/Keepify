@@ -27,7 +27,7 @@
 
 .sectionLine
 {
-    height: 50%;
+    height: 45%;
     width: 3px;
     position: absolute;
     background: #ffffff;
@@ -48,8 +48,8 @@
 
 .imgSize
 {
-    height: 120px;
-    width: 120px;
+    height: 110px;
+    width: 110px;
     margin: auto;
 }
 
@@ -173,7 +173,7 @@ input[type="date"]::-webkit-calendar-picker-indicator
     position: absolute;
     width: 50vw;
     left: calc(50% - 50vw/2);
-    height: 750px;
+    height: 700px;
     /* top: calc(50% - 750px/2.2); */
     top: 100%;
     text-align: center;
@@ -249,7 +249,7 @@ input[type="date"]::-webkit-calendar-picker-indicator
 #lowerArea
 {
     display: flex;
-    height: 60%;
+    height: 50%;
 }
 
 /* --------------> Animation Classes <---------------- */
@@ -442,4 +442,75 @@ input[type="date"]::-webkit-calendar-picker-indicator
     {
         font-size: 28px;
     } 
+}
+
+@media only screen and (max-width : 550px)
+{
+    #signUpArea 
+    {
+        width: 350px;
+        left: calc(50% - 350px/2);
+        height: 550px;
+    }
+    
+    #signUpHeading 
+    {
+        margin-top: 28px;
+        font-size: 38px;
+    }
+
+    #signUpForm 
+    {               
+        width: 85%;
+        margin: 20px auto;
+    }
+
+    #signUpForm input, #signUpForm button 
+    {
+        margin: 15px 0px;
+        height: 40px;
+    }
+
+    #signUpForm button 
+    {
+        width: 55%;
+        margin: 45px auto;
+    }
+
+    #avatarPage 
+    {
+        height: 650px;
+        width: 350px;
+        left: calc(50% - 350px/2);
+    }
+
+    #backArrow 
+    {
+        top: auto;
+        bottom: 18px;
+        left: 18px;
+    }
+
+    #avatarHeading 
+    {
+        font-size: 25px;
+    }
+
+    .avatarSection 
+    {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        row-gap: 10px;
+    }
+
+    .imgSize 
+    {
+        height: 75px;
+        width: 75px;
+    }
+
+    .sectionLine 
+    {
+        top: calc(50% - 50%/4.8);
+    }
 }
