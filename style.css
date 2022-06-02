@@ -67,6 +67,11 @@
     align-items: center;
     justify-content: center; */
     overflow: hidden;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -96,9 +101,9 @@
     /* display: none; */
     height: 650px;
     width: 30vw;
-    position: absolute;
+    /* position: absolute;
     left: calc(50% - 30vw/2);
-    top: calc(50% - 650px/2);
+    top: calc(50% - 650px/2); */
     text-align: center;
 
     /* glassMorphism */
@@ -260,6 +265,7 @@ input[type="date"]::-webkit-calendar-picker-indicator
 .classAvatarIn
 {
     animation-name: avatarIn;
+    animation-duration: 800ms;
 }
 
 .classAvatarOut
@@ -270,11 +276,13 @@ input[type="date"]::-webkit-calendar-picker-indicator
 .classSignUpPageIn
 {
     animation-name: signUpPageIn;
+    animation-duration: 700ms;
 }
 
 .classSignUpPageOut
 {
     animation-name: signUpPageOut;
+    animation-duration: 400ms;
 }
 
 /* -----------------> Animations <---------------- */
@@ -287,15 +295,17 @@ input[type="date"]::-webkit-calendar-picker-indicator
     }
     /* 33%
     {
-        top: 60%;
-    }
-    66%
-    {
         top: 50%;
     } */
+    50%
+    {
+        /* position: absolute; */
+        top: 13%;
+    }
     100%
     {
-        top: calc(50% - 750px/2.2);
+        /* top: calc(50% - 750px/2.2); */
+        position: initial;
     }
 }
 
@@ -303,6 +313,7 @@ input[type="date"]::-webkit-calendar-picker-indicator
 {
     0%
     {
+        position: absolute;
         top: 20%;
     }
     /* 33%
@@ -315,6 +326,7 @@ input[type="date"]::-webkit-calendar-picker-indicator
     } */
     100%
     {
+        position: absolute;
         top:100%;
     }
 }
@@ -323,19 +335,22 @@ input[type="date"]::-webkit-calendar-picker-indicator
 {
     0%
     {
-        top: -100%;
+        position: absolute;
+        top: -80%;
     }
-    /* 33%
+    90%
     {
-        top: 0%;
+        position: absolute;
+        top: 15%;
     }
-    66%
+    /*80%
     {
-        top: 10%;
+        position: initial;
+        /* top: 0%; 
     } */
     100%
     {
-        top:calc(50% - 650px/2);
+        position: initial;        
     }
 }
 
@@ -343,7 +358,9 @@ input[type="date"]::-webkit-calendar-picker-indicator
 {
     0%
     {
+        position: absolute;
         top: 0%;
+        left: calc(50% - 30vw/2);
     }
     /* 33%
     {
@@ -355,7 +372,8 @@ input[type="date"]::-webkit-calendar-picker-indicator
     } */
     100%
     {
-        top: -100%;
+        position: absolute;
+        top: -80%;
     }
 }
 
