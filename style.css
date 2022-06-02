@@ -360,7 +360,6 @@ input[type="date"]::-webkit-calendar-picker-indicator
     {
         position: absolute;
         top: 0%;
-        left: calc(50% - 30vw/2);
     }
     /* 33%
     {
