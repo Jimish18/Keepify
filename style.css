@@ -358,3 +358,71 @@ input[type="date"]::-webkit-calendar-picker-indicator
         top: -100%;
     }
 }
+
+/* ----------------> Media Queries <------------------- */
+
+@media only screen and (max-width : 1545px)
+{
+    #signUpArea
+    {
+        width: 520px;
+        left : calc(50% - 520px/2);
+    }
+
+    #avatarPage
+    {
+        width: 775px;
+        left: calc(50% - 775px/2);
+    }
+}
+
+@media only screen and (max-width : 930px)
+{
+    #avatarPage
+    {
+        width: 500px;
+        left: calc(50% - 500px/2);
+    }
+
+    .imgSize
+    {
+        height: 90px;
+        width: 90px;
+    }
+
+    .avatarSection
+    {
+        width: 85%;
+    }
+
+    .sectionLine
+    {
+        top: calc(50% - 50%/6);
+    }
+
+    #avatarHeading 
+    {        
+        font-size: 30px;
+    }
+
+    #backArrow i 
+    {
+        font-size: 25px;
+    }
+
+    #selectedAvatarDetail h2 
+    {
+        font-size: 28px;
+    }
+
+    #lowerArea button
+    {
+        width: 45px;
+        height: 45px;
+    } 
+
+    #lowerArea button i
+    {
+        font-size: 28px;
+    } 
+}
