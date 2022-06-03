@@ -1,9 +1,9 @@
 /* --------------> Fonts <---------------------------- */
-/* @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap'); Kanit */
-/* @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap'); Acme */
-/* @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap'); /* Courgette */
-/* @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap'); /* kaushan script  */
-/* @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap'); /* Philosopher */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap'); /* Kanit */
+/*@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap'); /* Acme 
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap'); /* Courgette 
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap'); /* kaushan script  
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap'); /* Philosopher */
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 
 
@@ -13,6 +13,7 @@
     padding: 0;
     box-sizing: border-box;
     color: #ffffff;
+    font-family: 'Kanit', sans-serif;
 }
 
 /* ------------------->  Classes <----------------------- */
@@ -93,7 +94,6 @@
     /* font-family: 'Kaushan Script', cursive ; */
     /* font-family: 'Philosopher', sans-serif; */
     font-family: 'Merienda', cursive ;
-    /* letter-spacing: 5px; */
 }
 
 #signUpArea
@@ -126,6 +126,7 @@
 
 #signUpHeading
 {
+    /* font-family: 'Philosopher', sans-serif; */
     margin-top: 50px;
     letter-spacing: 2px;
 }
@@ -224,6 +225,11 @@ input[type="date"]::-webkit-calendar-picker-indicator
 {
     margin-top: 30px;
     letter-spacing: 1.5px;
+}
+
+#avatarName
+{
+    letter-spacing: 1px;
 }
 
 /* ----------------> Selected Avatar Detail <-------------- */
