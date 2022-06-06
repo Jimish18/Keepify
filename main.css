@@ -22,9 +22,14 @@ nav
     align-items: center;;
 }
 
+#hamburgerMenu
+{
+    margin: 0px 10px 0px 35px;
+}
+
 #hamburgerMenu i
 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     color: white;
 }
 
@@ -32,6 +37,7 @@ nav
 {
     display: flex;
     align-items: center;
+    margin: 0px 40px 0px 10px;
 }
 
 #logo h4
@@ -42,18 +48,25 @@ nav
 #searchBar
 {
     background: #ffffff;
-    width: 40%;
+    width: fit-content;
+    padding: 0px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 
 #searchBar input
 {
     border: none;
+    width: 40vw;
+    height: 50px;
+    padding: 0px 15px;
 }
 
 #settingMenu i
 {
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
 }
 
 #account
@@ -65,5 +78,5 @@ nav
 #gridIcon
 {
     filter: invert(1);
-    height: 1.8rem;
+    height: 1.3rem;
 }
