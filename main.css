@@ -1,12 +1,18 @@
+/* -----------------> Fonts <--------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap'); /* Merienda */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap'); /* Kanit */
+ 
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
 }
 
 #container
 {
+    position: absolute;
     height: 100vh;
     width: 100vw;
     background: url(images/bg14.jpg); /* 8 ,10 , 13 , 14* */
@@ -17,11 +23,16 @@
 
 nav
 {
+    position: fixed;
     display: flex;
-    position: relative;
-    align-items: center;;
+    /* position: relative; */
+    align-items: center;
+    height: 80px;
+    background: #0000008a;
+    box-shadow: #0a0a0a 0px 5px 10px;
 }
 
+/* -----------> Hamburger Menu <---------------- */
 #hamburgerMenu
 {
     margin: 0px 10px 0px 35px;
@@ -33,6 +44,7 @@ nav
     color: white;
 }
 
+/* ---------------> LOGO <------------------- */
 #logo
 {
     display: flex;
@@ -40,19 +52,27 @@ nav
     margin: 0px 40px 0px 10px;
 }
 
-#logo h4
+#logo h3
 {
     color: #ffffff;
+    font-family: 'Merienda', cursive ;
+    letter-spacing: 1px;
 }
 
+/* --------------------> Search Bar <---------------- */
 #searchBar
 {
-    background: #ffffff;
-    width: fit-content;
-    padding: 0px 20px;
-    border-radius: 10px;
+    width: 70vw;
     display: flex;
     align-items: center;
+    margin: 0px 0px 0px 10px;
+}
+
+#searchSection
+{
+    background: #ffffff;
+    padding: 0px 20px;
+    border-radius: 10px;
 }
 
 #searchBar input
@@ -63,16 +83,44 @@ nav
     padding: 0px 15px;
 }
 
+#searchBar input:focus
+{
+    outline: none;
+}
+
+#closeSearch
+{
+    display: none;
+}
+
+/* -------------------------> Setting Menu <------------------ */
+#settingMenu
+{
+    width: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
 #settingMenu i
 {
     color: white;
     font-size: 1.3rem;
+    margin: 0px 5px;
 }
 
+/* -----------------> Account <-------------------- */
 #account
 {
     display: flex;
     align-items: center;
+    margin: 0px 20px 0px 0px;
+    width: 100px;
+}
+
+#account img
+{
+    margin: 0px 6px;
 }
 
 #gridIcon
