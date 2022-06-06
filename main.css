@@ -14,3 +14,56 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+nav
+{
+    display: flex;
+    position: relative;
+    align-items: center;;
+}
+
+#hamburgerMenu i
+{
+    font-size: 1.8rem;
+    color: white;
+}
+
+#logo
+{
+    display: flex;
+    align-items: center;
+}
+
+#logo h4
+{
+    color: #ffffff;
+}
+
+#searchBar
+{
+    background: #ffffff;
+    width: 40%;
+}
+
+#searchBar input
+{
+    border: none;
+}
+
+#settingMenu i
+{
+    color: white;
+    font-size: 1.8rem;
+}
+
+#account
+{
+    display: flex;
+    align-items: center;
+}
+
+#gridIcon
+{
+    filter: invert(1);
+    height: 1.8rem;
+}
