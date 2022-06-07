@@ -23,11 +23,12 @@
 
 nav
 {
-    position: fixed;
+    position: sticky;
+    top: 0;
     display: flex;
     /* position: relative; */
     align-items: center;
-    height: 80px;
+    height: 70px;
     background: #0000008a;
     box-shadow: #0a0a0a 0px 5px 10px;
 }
@@ -79,7 +80,7 @@ nav
 {
     border: none;
     width: 40vw;
-    height: 50px;
+    height: 45px;
     padding: 0px 15px;
 }
 
