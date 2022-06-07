@@ -129,3 +129,29 @@ nav
     filter: invert(1);
     height: 1.3rem;
 }
+
+#sideBar
+{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.sideBarSections
+{
+    display: flex;
+}
+
+.sideBarSections span
+{
+    color: #ffffff;
+}
+
+.sectionLogo img
+{
+    filter: invert(1);
+    height: 30px;
+    width: 30px;
+}
+
+
