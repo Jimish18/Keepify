@@ -130,6 +130,14 @@ nav
     height: 1.3rem;
 }
 
+/* ---------------------> Main <------------------ */
+
+main
+{
+    display: flex;
+    align-items: center;
+}
+
 /* -----------------> Side Bar <----------------- */
 
 #sideBar
@@ -139,7 +147,7 @@ nav
     width: fit-content;
     height: calc(100vh - 70px);
     padding: 20px 0px;
-    /* background: #025648; */
+    background: #025648;
 }
 
 .sideBarSections
@@ -172,6 +180,14 @@ nav
     display: flex;
     /* margin: 0px 20px 0px 0px; */
     margin: 0px 15px;
+}
+
+/* --------------------------> Main Content <----------------- */
+
+#mainContent
+{
+    height: calc(100vh - 70px);
+    width: calc(100vw - 100px);
 }
 
 

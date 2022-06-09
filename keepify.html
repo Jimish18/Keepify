@@ -13,26 +13,26 @@
     <div id="container">
         <nav>
             <div id="hamburgerMenu">
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" title="Main Menu"></i>
             </div>
 
             <div id="logo">
-                <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" height="40px" width="40px">
-                <h3>Keepify</h3>
+                <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" height="40px" width="40px" title="Keepify">
+                <h3 title="Keepify">Keepify</h3>
             </div>
 
             <div id="searchBar">
                 <div id="searchSection">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-magnifying-glass" title="Search"></i>
                     <input type="text" name="search" id="search" placeholder="Search">
                     <i class="fa-solid fa-xmark" id="closeSearch"></i>
                 </div>
             </div>
 
             <div id="settingMenu">
-                <i class="fa-solid fa-arrow-rotate-right"></i>
-                <i class="fa-solid fa-list"></i>
-                <i class="fa-solid fa-gear"></i>
+                <i class="fa-solid fa-arrow-rotate-right" title="Refresh"></i>
+                <i class="fa-solid fa-list" title="List View"></i>
+                <i class="fa-solid fa-gear" title="Setting"></i>
             </div>
 
             <div id="account">
@@ -81,7 +81,35 @@
                     <span> Bin </span>
                 </div>
             </div>
-            <div id="mainContent"></div>
+
+            <div id="mainContent">
+                <div id="inputContainer">
+                    <div id="inputDiv">
+                        <div id="takeNoteTitle">
+                            <span>Take a note...</span>
+                        </div>
+                        <div id="inputOptionIconSection">
+                            <i class="fa-regular fa-square-check"></i>
+                            <i class="fa-regular fa-paintbrush-fine"></i>
+                            <i class="fa-regular fa-image"></i>
+                        </div>
+                        <div id="noteTitleInputDiv">
+                            <input type="text" name="noteTitle" id="noteTitle" placeholder="Title">
+                        </div>
+                        <div id="noteTextInputDiv">
+                            <input type="text" name="noteText" id="noteText" placeholder="Take a note...">
+                        </div>
+                        <div id="subInputOptionIconSection">
+                            <img src="images/bell.png" alt="" style="filter: invert(1);">
+                            <i class="fa-regular fa-user-plus"></i>
+                            <i class="fa-regular fa-palette"></i>
+                            <i class="fa-regular fa-image"></i>
+                            <img src="images/archive.png" alt="Archive">
+                            <i class="fa-regular fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 </body>
