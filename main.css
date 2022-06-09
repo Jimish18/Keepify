@@ -130,28 +130,48 @@ nav
     height: 1.3rem;
 }
 
+/* -----------------> Side Bar <----------------- */
+
 #sideBar
 {
     display: flex;
     flex-direction: column;
     width: fit-content;
+    height: calc(100vh - 70px);
+    padding: 20px 0px;
+    /* background: #025648; */
 }
 
 .sideBarSections
 {
     display: flex;
+    align-items: center;
+    margin: 5px 5px 5px 0px;
+    padding: 8px 20px;
+    /* background: #252525; */
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
 }
 
 .sideBarSections span
 {
     color: #ffffff;
+    display: none;
+    margin: 0px 5px 0px 0px;
 }
 
 .sectionLogo img
 {
     filter: invert(1);
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
+}
+
+.sectionLogo
+{
+    display: flex;
+    /* margin: 0px 20px 0px 0px; */
+    margin: 0px 15px;
 }
 
 
