@@ -322,3 +322,26 @@ main
     /* display: none; */
     padding: 10px 15px 2px 15px;
 }
+
+/* -------------------------> Note Container <------------------------------ */
+
+#notesSection
+{
+    display: flex;
+    padding: 0px 50px;
+}
+
+.noteCard
+{
+    width: 225px;
+    /* max-height: 700px; */
+    height: 450px;
+    background: rgba(173,171,244,0.2);
+    border-width: 1px 0px 0px 1px;
+    border-style: solid;
+    border-color: #404277;
+    box-shadow: 4px 4px 10px rgb(0 0 0 / 40%);
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    margin: 0px 15px;
+}
