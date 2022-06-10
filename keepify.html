@@ -46,37 +46,37 @@
             <div id="sideBar">
                 <div class="sideBarSections">
                     <div class="sectionLogo">
-                        <img src="images/idea.png" alt="Notes">
+                        <img src="images/idea.png" alt="Notes" class="imageOrientation">
                     </div>
                     <span> Notes </span>
                 </div>
                 <div class="sideBarSections">
                     <div class="sectionLogo">
-                        <img src="images/bell.png" alt="Reminders">
+                        <img src="images/bell.png" alt="Reminders" class="imageOrientation">
                     </div>
                     <span> Reminders </span>
                 </div>
                 <div class="sideBarSections">
                     <div class="sectionLogo">
-                        <img src="images/tag.png" alt="Labels">
+                        <img src="images/tag.png" alt="Labels" class="imageOrientation">
                     </div>
                     <span> Labels </span>
                 </div>
                 <div class="sideBarSections">
                     <div class="sectionLogo">
-                        <img src="images/pencil.png" alt="Edit Labels">
+                        <img src="images/pencil.png" alt="Edit Labels" class="imageOrientation">
                     </div>
                     <span> Edit Labels </span>
                 </div>
                 <div class="sideBarSections">
                     <div class="sectionLogo">
-                        <img src="images/download-file.png" alt="Archive">
+                        <img src="images/download-file.png" alt="Archive" class="imageOrientation">
                     </div>
                     <span> Archive </span>
                 </div>
                 <div class="sideBarSections">
                     <div class="sectionLogo">
-                        <img src="images/delete.png" alt="Bin">
+                        <img src="images/delete.png" alt="Bin" class="imageOrientation">
                     </div>
                     <span> Bin </span>
                 </div>
@@ -85,30 +85,38 @@
             <div id="mainContent">
                 <div id="inputContainer">
                     <div id="inputDiv">
-                        <div id="takeNoteTitle">
-                            <span>Take a note...</span>
+                        <div id="frontTitleDiv">
+                            <div id="takeNoteTitle">
+                                <span>Take a note...</span>
+                            </div>
+                            <div id="inputOptionIconSection">
+                                <img src="images/tick.png"  class="imageOrientation">
+                                <img src="images/paintbrush.png"  class="imageOrientation">
+                                <img src="images/image.png" class="imageOrientation">
+                            </div>
                         </div>
-                        <div id="inputOptionIconSection">
-                            <img src="images/tick.png"  style="filter: invert(1);">
-                            <img src="images/paintbrush.png"  style="filter: invert(1);">
-                            <img src="images/image.png" style="filter: invert(1);">
-                        </div>
-                        <div id="noteTitleInputDiv">
-                            <input type="text" name="noteTitle" id="noteTitle" placeholder="Title">
-                        </div>
-                        <div id="noteTextInputDiv">
-                            <input type="text" name="noteText" id="noteText" placeholder="Take a note...">
-                        </div>
-                        <div id="subInputOptionIconSection">
-                            <img src="images/notification-bell.png"  style="filter: invert(1);">
-                            <img src="images/add-user.png"  style="filter: invert(1);">
-                            <img src="images/palette.png" style="filter: invert(1);">
-                            <img src="images/image.png" style="filter: invert(1);">
-                            <img src="images/download-file.png" style="filter: invert(1);">
-                            <img src="images/more.png" style="filter: invert(1);">
-                            <img src="images/undo.png" style="filter: invert(1);">
-                            <img src="images/redo.png" style="filter: invert(1);">
-                            <span>Close</span>
+                        <div id="backTitleDiv">
+                            <div id="noteTitleInputDiv">
+                                <input type="text" name="noteTitle" id="noteTitle" placeholder="Title">
+                            </div>
+                            <div id="noteTextInputDiv">
+                                <input type="text" name="noteText" id="noteText" placeholder="Take a note...">
+                            </div>
+                            <div id="subInputOptionIconSection">
+                                <div id="subIconDiv">
+                                    <img src="images/notification-bell.png"  class = "imageOrientation">
+                                    <img src="images/add-user.png"  class = "imageOrientation">
+                                    <img src="images/palette.png" class = "imageOrientation">
+                                    <img src="images/image.png" class = "imageOrientation">
+                                    <img src="images/download-file.png" class = "imageOrientation">
+                                    <img src="images/more.png" class = "imageOrientation">
+                                    <img src="images/undo.png" class = "imageOrientation">
+                                    <img src="images/redo.png" class = "imageOrientation">
+                                </div>
+                                <div id="closeNoteInput">
+                                    <span>Close</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
