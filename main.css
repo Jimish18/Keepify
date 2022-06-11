@@ -43,7 +43,8 @@ nav
     /* position: relative; */
     align-items: center;
     height: 70px;
-    background: #0000008a;
+    /* background: #0000008a; */
+    background: rgba(0, 0, 0, 0.25);
     box-shadow: #0a0a0a 0px 5px 10px;
 }
 
@@ -164,6 +165,9 @@ main
     margin: 5px 0px 5px 15px;
     background: #025648;
 
+    position: absolute;
+    z-index: 5;
+
     /* Glassmorphism */
     background: rgba(173, 171, 244, 0.2);
     border-width: 1px 0px 0px 1px;
@@ -206,6 +210,8 @@ main
     height: calc(100vh - 70px);
     width: calc(100vw - 100px);
     overflow-y: scroll;
+    position: relative;
+    left: 100px;
 }
 
 /* ------------------------> Input Contaiener <-------------------- */
@@ -230,7 +236,7 @@ main
 {
     display: flex;
     align-items: center;
-    display: none;
+    /* display: none; */
 }
 
 #takeNoteTitle
@@ -321,7 +327,7 @@ main
 
 #backTitleDiv
 {
-    /* display: none; */
+    display: none;
     padding: 10px 15px 2px 15px;
 }
 
@@ -379,4 +385,166 @@ main
 {
     margin: 15px 0px 5px 0px;
     visibility: hidden;
+}
+
+/* ----------------------> Media Queries <-------------------- */
+
+@media only screen and (max-width: 1720px)
+{
+    #notesSection
+    {
+        grid-template-columns: auto auto auto auto auto;
+    }
+
+    .noteCard
+    {
+        margin: 10px auto;
+    }
+}
+
+@media only screen and (max-width: 1450px)
+{
+    #notesSection
+    {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media only screen and (max-width: 1200px)
+{
+    #notesSection
+    {
+        grid-template-columns: auto auto auto;
+    }
+
+    .noteCard
+    {
+        width: 260px;
+    }
+}
+
+@media only screen and (max-width: 1020px)
+{
+    #notesSection
+    {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width: 970px)
+{
+    #searchBar
+    {
+        display: none;
+    }
+
+    #settingMenu
+    {
+        width: fit-content;
+        margin: auto 10px auto auto;
+    }
+}
+
+@media only screen and (max-width: 770px)
+{
+    #inputDiv
+    {
+        width: 450px;
+    }
+
+    #takeNoteTitle 
+    {
+        width: 70%;
+    }
+
+    .noteCard 
+    {
+        width: 230px;
+    }
+}
+
+@media only screen and (max-width: 670px)
+{
+    #notesSection
+    {
+        grid-template-columns: auto;
+    }
+
+    .noteCard 
+    {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 600px)
+{
+    #hamburgerMenu i,#settingMenu i
+    {
+        font-size: 1.1rem;
+    }
+
+    #logo img
+    {
+        height: 30px;
+        width: 30px;
+    }
+
+    #logo h3
+    {
+        font-size: 1rem;
+    }
+
+    #gridIcon
+    {
+        height: 1.1rem;
+    }
+
+    #account
+    {
+        margin: 0;
+    }
+
+    #accountAvatar
+    {
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 570px)
+{
+    #inputDiv
+    {
+        width: 85%;
+    }
+
+    #takeNoteTitle 
+    {
+        width: 75%;
+    }
+
+    #inputOptionIconSection
+    {
+        width: auto;
+    }
+
+    .noteCard 
+    {
+        width: 280px;
+    }
+}
+
+@media only screen and (max-width: 475px)
+{
+    .noteCard 
+    {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 475px)
+{
+    #inputOptionIconSection
+    {
+        display: none;
+    }
 }
