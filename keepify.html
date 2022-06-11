@@ -12,7 +12,7 @@
 <body>
     <div id="container">
         <nav>
-            <div id="hamburgerMenu">
+            <div id="hamburgerMenu" onclick="viewSidebar()">
                 <i class="fa-solid fa-bars" title="Main Menu"></i>
             </div>
 
@@ -48,37 +48,37 @@
                     <div class="sectionLogo">
                         <img src="images/idea.png" alt="Notes" class="imageOrientation">
                     </div>
-                    <span> Notes </span>
+                    <span class="hide"> Notes </span>
                 </div>
                 <div class="sideBarSections">
                     <div class="sectionLogo">
                         <img src="images/bell.png" alt="Reminders" class="imageOrientation">
                     </div>
-                    <span> Reminders </span>
+                    <span class="hide"> Reminders </span>
                 </div>
                 <div class="sideBarSections">
                     <div class="sectionLogo">
                         <img src="images/tag.png" alt="Labels" class="imageOrientation">
                     </div>
-                    <span> Labels </span>
+                    <span class="hide"> Labels </span>
                 </div>
                 <div class="sideBarSections">
                     <div class="sectionLogo">
                         <img src="images/pencil.png" alt="Edit Labels" class="imageOrientation">
                     </div>
-                    <span> Edit Labels </span>
+                    <span class="hide"> Edit Labels </span>
                 </div>
                 <div class="sideBarSections">
                     <div class="sectionLogo">
                         <img src="images/download-file.png" alt="Archive" class="imageOrientation">
                     </div>
-                    <span> Archive </span>
+                    <span class="hide"> Archive </span>
                 </div>
                 <div class="sideBarSections">
                     <div class="sectionLogo">
                         <img src="images/delete.png" alt="Bin" class="imageOrientation">
                     </div>
-                    <span> Bin </span>
+                    <span class="hide"> Bin </span>
                 </div>
             </div>
 
@@ -247,4 +247,5 @@
         </main>
     </div>
 </body>
+<script src="main.js"></script>
 </html>
