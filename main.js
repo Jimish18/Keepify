@@ -2,6 +2,7 @@ console.log("Jay Shree Ram");
 
 let sidebarSpan = document.querySelectorAll(".sideBarSections span");
 let sideBar = document.getElementById("sideBar");
+let refresh = document.getElementById("refresh");
 
 // -----------------> SideBar <------------------------ //
 function viewSidebar()
@@ -38,4 +39,9 @@ sideBar.addEventListener("mouseleave",() =>
         e.classList.remove("visible");
         e.classList.add("hide");
     })
+})
+
+refresh.addEventListener("click",()=>
+{
+    location.reload();
 })

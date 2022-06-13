@@ -33,6 +33,29 @@
     display: none;
 }
 
+i:hover
+{
+    transition: 500ms;
+    background: #1b1e1f;
+    border-radius: 100%;
+}
+
+/* .noteSectionGrid
+{
+    grid-template-columns: auto;
+}
+
+.listViewNoteCard
+{
+    margin: 15px auto;
+    width: 50%;
+}
+
+.gridViewNoteCard
+{
+
+} */
+
 /* <------------------------------------------------------------------------> */
 
 #container
@@ -63,12 +86,13 @@ nav
 /* -----------> Hamburger Menu <---------------- */
 #hamburgerMenu
 {
-    margin: 0px 10px 0px 35px;
+    margin: 0px 10px 0px 25px;
 }
 
 #hamburgerMenu i
 {
     font-size: 1.3rem;
+    padding: 12px;
     color: white;
 }
 
@@ -140,7 +164,7 @@ nav
 {
     color: white;
     font-size: 1.1rem;
-    margin: 0px 8px;
+    padding: 12px;
 }
 
 /* -----------------> Account <-------------------- */
@@ -448,7 +472,7 @@ main
     }
 }
 
-@media only screen and (max-width: 970px)
+@media only screen and (max-width: 985px)
 {
     #searchBar
     {
