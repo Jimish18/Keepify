@@ -1,8 +1,14 @@
 console.log("Jay Shree Ram");
 
+/* ------------------> Grab Elements <--------------------- */
 let sidebarSpan = document.querySelectorAll(".sideBarSections span");
 let sideBar = document.getElementById("sideBar");
 let refresh = document.getElementById("refresh");
+let view = document.getElementById("view");
+let notesSection = document.getElementById("notesSection");
+let noteCard = document.querySelectorAll(".noteCard");
+let frontTitleDiv = document.getElementById("frontTitleDiv");
+let backTitleDiv = document.getElementById("backTitleDiv");
 
 // -----------------> SideBar <------------------------ //
 function viewSidebar()
@@ -41,7 +47,43 @@ sideBar.addEventListener("mouseleave",() =>
     })
 })
 
+/* -----------------------> Refresh <-------------------- */
 refresh.addEventListener("click",()=>
 {
     location.reload();
+})
+
+/* ------------------------> View change <------------------ */
+view.addEventListener("click",() =>
+{
+    noteCard.forEach((e) =>
+    {
+        if(e.classList.contains("gridViewNoteCard"))
+        {
+            notesSection.style.display = `block`;
+            e.classList.remove("gridViewNoteCard");
+            e.classList.add("listViewNoteCard");
+        }
+        else
+        {
+            notesSection.style.display = `grid`;
+            e.classList.add("gridViewNoteCard");
+            e.classList.remove("listViewNoteCard");
+        }
+    })
+})
+
+frontTitleDiv.addEventListener("click",()=>
+{
+    frontTitleDiv.style.display = 'none';
+    backTitleDiv.style.display = 'block';
+})
+
+document.addEventListener("click",(event) =>
+{
+    if(!backTitleDiv.contains(event.target) && !frontTitleDiv.contains(event.target))
+    {
+        frontTitleDiv.style.display = 'flex';
+        backTitleDiv.style.display = 'none';
+    }
 })
