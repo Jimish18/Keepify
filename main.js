@@ -1,7 +1,7 @@
 console.log("Jay Shree Ram");
 
 let sidebarSpan = document.querySelectorAll(".sideBarSections span");
-
+let sideBar = document.getElementById("sideBar");
 
 // -----------------> SideBar <------------------------ //
 function viewSidebar()
@@ -20,3 +20,22 @@ function viewSidebar()
         }
     })
 }
+
+sideBar.addEventListener("mouseover",() =>
+{
+    sidebarSpan.forEach((e)=>
+    {
+        
+        e.classList.remove("hide");
+        e.classList.add("visible");
+    })
+})
+
+sideBar.addEventListener("mouseleave",() =>
+{
+    sidebarSpan.forEach((e)=>
+    {
+        e.classList.remove("visible");
+        e.classList.add("hide");
+    })
+})
