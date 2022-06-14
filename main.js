@@ -9,6 +9,11 @@ let notesSection = document.getElementById("notesSection");
 let noteCard = document.querySelectorAll(".noteCard");
 let frontTitleDiv = document.getElementById("frontTitleDiv");
 let backTitleDiv = document.getElementById("backTitleDiv");
+let noteTitle = document.getElementById("noteTitle");
+let noteText = document.getElementById("noteText");
+
+displayNotes();
+
 
 // -----------------> SideBar <------------------------ //
 function viewSidebar()
@@ -85,5 +90,77 @@ document.addEventListener("click",(event) =>
     {
         frontTitleDiv.style.display = 'flex';
         backTitleDiv.style.display = 'none';
+
+        addNoteToList();
     }
 })
+
+
+/* ---------------------------> Functions <-------------------------- */
+
+function addNoteToList()
+{
+    let notes = localStorage.getItem("notes");
+    if(notes == null)
+    {
+        notesObj = []
+    }
+    else
+    {
+        notesObj = JSON.parse(notes)
+    }
+
+    let note = 
+    {
+        title : noteTitle.value,
+        content : noteText.value
+    }
+
+    if(note.title !== `` || note.content !== ``)
+    {
+        notesObj.push(note);
+        localStorage.setItem("notes",JSON.stringify(notesObj));
+    }
+    
+
+    noteTitle.value = "";
+    noteText.value = "";
+
+    displayNotes();
+}
+
+function displayNotes()
+{
+    let notes = localStorage.getItem("notes");
+    if(notes == null)
+    {
+        notesObj = []
+    }
+    else
+    {
+        notesObj = JSON.parse(notes)
+    }
+
+    let html = ``;
+
+    notesObj.forEach((item) => 
+    {
+        html += `   <div class="noteCard gridViewNoteCard">
+                        <div class="notedTitleText">${item.title}</div>
+                        
+                        <div class="notedContent scroll">${item.content}</div>
+                        
+                        <div class="noteManipulationMenu">
+                            <img src="images/notification-bell.png" >
+                            <img src="images/add-user.png" >
+                            <img src="images/palette.png">
+                            <img src="images/image.png">
+                            <img src="images/download-file.png">
+                            <img src="images/more.png">
+                        </div>
+                    </div>
+                `
+    })
+
+    notesSection.innerHTML = html;
+}
