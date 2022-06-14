@@ -6,13 +6,24 @@ let sideBar = document.getElementById("sideBar");
 let refresh = document.getElementById("refresh");
 let view = document.getElementById("view");
 let notesSection = document.getElementById("notesSection");
-let noteCard = document.querySelectorAll(".noteCard");
+// let noteCard = document.querySelectorAll(".noteCard");
+let noteCard = document.getElementsByClassName("noteCard")
 let frontTitleDiv = document.getElementById("frontTitleDiv");
 let backTitleDiv = document.getElementById("backTitleDiv");
 let noteTitle = document.getElementById("noteTitle");
 let noteText = document.getElementById("noteText");
 
 displayNotes();
+
+// --------------------------> Utility Functions <--------------------------- //
+function getElementFromString(string)
+{
+    let div = document.createElement(`div`);
+    div.classList.add("noteCard");
+    div.classList.add(`gridViewNoteCard`);
+    div.innerHTML = string;
+    return div;
+}
 
 
 // -----------------> SideBar <------------------------ //
@@ -61,21 +72,38 @@ refresh.addEventListener("click",()=>
 /* ------------------------> View change <------------------ */
 view.addEventListener("click",() =>
 {
-    noteCard.forEach((e) =>
+    // kept Code for debuggig
+    // noteCard.forEach((e) =>
+    // {
+    //     if(e.classList.contains("gridViewNoteCard"))
+    //     {
+    //         notesSection.style.display = `block`;
+    //         e.classList.remove("gridViewNoteCard");
+    //         e.classList.add("listViewNoteCard");
+    //     }
+    //     else
+    //     {
+    //         notesSection.style.display = `grid`;
+    //         e.classList.add("gridViewNoteCard");
+    //         e.classList.remove("listViewNoteCard");
+    //     }
+    // })
+
+    for(item of noteCard)
     {
-        if(e.classList.contains("gridViewNoteCard"))
+        if(item.classList.contains("gridViewNoteCard"))
         {
             notesSection.style.display = `block`;
-            e.classList.remove("gridViewNoteCard");
-            e.classList.add("listViewNoteCard");
+            item.classList.remove("gridViewNoteCard");
+            item.classList.add("listViewNoteCard");
         }
         else
         {
             notesSection.style.display = `grid`;
-            e.classList.add("gridViewNoteCard");
-            e.classList.remove("listViewNoteCard");
+            item.classList.add("gridViewNoteCard");
+            item.classList.remove("listViewNoteCard");
         }
-    })
+    }
 })
 
 frontTitleDiv.addEventListener("click",()=>
@@ -126,7 +154,8 @@ function addNoteToList()
     noteTitle.value = "";
     noteText.value = "";
 
-    displayNotes();
+    // displayNotes();
+    location.reload();
 }
 
 function displayNotes()
@@ -141,26 +170,29 @@ function displayNotes()
         notesObj = JSON.parse(notes)
     }
 
-    let html = ``;
+    // let html = ``;
+    // notesSection.innerHTML = html;
+
 
     notesObj.forEach((item) => 
     {
-        html += `   <div class="noteCard gridViewNoteCard">
-                        <div class="notedTitleText">${item.title}</div>
-                        
-                        <div class="notedContent scroll">${item.content}</div>
-                        
-                        <div class="noteManipulationMenu">
-                            <img src="images/notification-bell.png" >
-                            <img src="images/add-user.png" >
-                            <img src="images/palette.png">
-                            <img src="images/image.png">
-                            <img src="images/download-file.png">
-                            <img src="images/more.png">
-                        </div>
-                    </div>
-                `
+        let string =    `   <div class="notedTitleText">${item.title}</div>
+                                
+                            <div class="notedContent scroll">${item.content}</div>
+                            
+                            <div class="noteManipulationMenu">
+                                <img src="images/notification-bell.png" >
+                                <img src="images/add-user.png" >
+                                <img src="images/palette.png">
+                                <img src="images/image.png">
+                                <img src="images/download-file.png">
+                                <img src="images/more.png">
+                            </div>
+                        `
+        let noteCardDiv = getElementFromString(string);
+
+        notesSection.appendChild(noteCardDiv);
     })
 
-    notesSection.innerHTML = html;
+    
 }
