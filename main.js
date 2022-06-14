@@ -113,14 +113,19 @@ frontTitleDiv.addEventListener("click",()=>
 })
 
 document.addEventListener("click",(event) =>
-{
-    if(!backTitleDiv.contains(event.target) && !frontTitleDiv.contains(event.target))
-    {
-        frontTitleDiv.style.display = 'flex';
-        backTitleDiv.style.display = 'none';
+{   
 
-        addNoteToList();
+    if(backTitleDiv.style.display === 'block')
+    {
+        if(!backTitleDiv.contains(event.target) && !frontTitleDiv.contains(event.target) && !view.contains(event.target))
+        {
+            frontTitleDiv.style.display = 'flex';
+            backTitleDiv.style.display = 'none';
+    
+            addNoteToList();
+        }        
     }
+
 })
 
 
@@ -154,8 +159,7 @@ function addNoteToList()
     noteTitle.value = "";
     noteText.value = "";
 
-    // displayNotes();
-    location.reload();
+    displayNotesAfterPageLoad();
 }
 
 function displayNotes()
@@ -169,10 +173,9 @@ function displayNotes()
     {
         notesObj = JSON.parse(notes)
     }
-
+    
     // let html = ``;
     // notesSection.innerHTML = html;
-
 
     notesObj.forEach((item) => 
     {
@@ -192,7 +195,44 @@ function displayNotes()
         let noteCardDiv = getElementFromString(string);
 
         notesSection.appendChild(noteCardDiv);
+
     })
 
+    
+}
+
+function displayNotesAfterPageLoad()
+{
+    let notes = localStorage.getItem("notes");
+    if(notes == null)
+    {
+        notesObj = []
+    }
+    else
+    {
+        notesObj = JSON.parse(notes)
+    }
+    
+    notesSection.innerHTML = ``;
+
+    notesObj.forEach((item) => 
+    {
+        let string =    `   <div class="notedTitleText">${item.title}</div>
+                                
+                            <div class="notedContent scroll">${item.content}</div>
+                            
+                            <div class="noteManipulationMenu">
+                                <img src="images/notification-bell.png" >
+                                <img src="images/add-user.png" >
+                                <img src="images/palette.png">
+                                <img src="images/image.png">
+                                <img src="images/download-file.png">
+                                <img src="images/more.png">
+                            </div>
+                        `
+        let noteCardDiv = getElementFromString(string);
+
+        notesSection.appendChild(noteCardDiv);        
+    })
     
 }
