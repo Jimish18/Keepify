@@ -16,6 +16,9 @@ let password = document.getElementById("password");
 let avatarName = document.getElementById("avatarName");
 let selectedAvatar = document.getElementById("selectedAvatar");
 
+// -------------------> Grab login Button <------------------------- //
+let loginBtn = document.getElementById("loginBtn");
+
 
 // ----------> EL oncliking submitting signUp form <------------ //
 moveToAvatar.addEventListener("click",(e)=>
@@ -49,6 +52,14 @@ backArrow.addEventListener("click",()=>
 
     avatarPage.classList.add(`classAvatarOut`);
     signUpArea.classList.add(`classSignUpPageIn`);
+});
+
+loginBtn.addEventListener("click" , ()=>
+{
+    let imgSrc = selectedAvatar.src;
+
+    localStorage.setItem("avatarImgSrc",imgSrc);
+
 })
 
 // -----------------> Function to show selected Avatar <------------ //

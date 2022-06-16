@@ -12,6 +12,9 @@ let frontTitleDiv = document.getElementById("frontTitleDiv");
 let backTitleDiv = document.getElementById("backTitleDiv");
 let noteTitle = document.getElementById("noteTitle");
 let noteText = document.getElementById("noteText");
+let accountAvatar = document.getElementById("accountAvatar");
+
+
 
 displayNotes();
 
@@ -24,6 +27,10 @@ function getElementFromString(string)
     div.innerHTML = string;
     return div;
 }
+
+// ---------------------> Account Avatar Image <---------------- //
+let imgSrc = localStorage.getItem("avatarImgSrc");
+accountAvatar.src = imgSrc;
 
 
 // -----------------> SideBar <------------------------ //
@@ -128,7 +135,6 @@ document.addEventListener("click",(event) =>
 
 })
 
-
 /* ---------------------------> Functions <-------------------------- */
 
 
@@ -187,12 +193,12 @@ function displayNotes()
                             <div class="notedContent scroll">${item.content}</div>
                             
                             <div class="noteManipulationMenu">
-                                <img src="images/notification-bell.png" >
-                                <img src="images/delete.png" id = "${index}" onclick = "deleteNoteFromList(this.id)">
-                                <img src="images/palette.png">
-                                <img src="images/image.png">
-                                <img src="images/download-file.png">
-                                <img src="images/more.png">
+                                <img src="../images/notification-bell.png" >
+                                <img src="../images/delete.png" id = "${index}" onclick = "deleteNoteFromList(this.id)">
+                                <img src="../images/palette.png">
+                                <img src="../images/image.png">
+                                <img src="../images/download-file.png">
+                                <img src="../images/more.png">
                             </div>
                         `
         let noteCardDiv = getElementFromString(string);
@@ -226,12 +232,12 @@ function displayNotesAfterPageLoad()
                             <div class="notedContent scroll">${item.content}</div>
                             
                             <div class="noteManipulationMenu">
-                                <img src="images/notification-bell.png" >
-                                <img src="images/delete.png" id = "${index}" onclick = "deleteNoteFromList(this.id)">
-                                <img src="images/palette.png">
-                                <img src="images/image.png">
-                                <img src="images/download-file.png">
-                                <img src="images/more.png">
+                                <img src="../images/notification-bell.png" >
+                                <img src="../images/delete.png" id = "${index}" onclick = "deleteNoteFromList(this.id)">
+                                <img src="../images/palette.png">
+                                <img src="../images/image.png">
+                                <img src="../images/download-file.png">
+                                <img src="../images/more.png">
                             </div>
                         `
         let noteCardDiv = getElementFromString(string);
