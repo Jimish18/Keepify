@@ -426,8 +426,16 @@ main
 
 .noteManipulationMenu
 {
+    transition: 10ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 150ms;
     margin: 20px 0px 0px 0px;
-    /* visibility: hidden; */
+    visibility: hidden;
+}
+
+.noteCard:hover .noteManipulationMenu
+{
+    visibility: visible;
 }
 
 /* ----------------------> Media Queries <-------------------- */
