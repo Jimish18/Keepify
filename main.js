@@ -131,6 +131,8 @@ document.addEventListener("click",(event) =>
 
 /* ---------------------------> Functions <-------------------------- */
 
+
+// -----------------> Function To ADD Notes <---------------- //
 function addNoteToList()
 {
     let notes = localStorage.getItem("notes");
@@ -162,6 +164,7 @@ function addNoteToList()
     displayNotesAfterPageLoad();
 }
 
+// -----------------> Function To Display Notes on Page Load <---------------- //
 function displayNotes()
 {
     let notes = localStorage.getItem("notes");
@@ -177,7 +180,7 @@ function displayNotes()
     // let html = ``;
     // notesSection.innerHTML = html;
 
-    notesObj.forEach((item) => 
+    notesObj.forEach((item,index) => 
     {
         let string =    `   <div class="notedTitleText">${item.title}</div>
                                 
@@ -185,7 +188,7 @@ function displayNotes()
                             
                             <div class="noteManipulationMenu">
                                 <img src="images/notification-bell.png" >
-                                <img src="images/add-user.png" >
+                                <img src="images/delete.png" id = "${index}" onclick = "deleteNoteFromList(this.id)">
                                 <img src="images/palette.png">
                                 <img src="images/image.png">
                                 <img src="images/download-file.png">
@@ -201,6 +204,7 @@ function displayNotes()
     
 }
 
+// -----------------> Function To Display Notes After Page Load <---------------- //
 function displayNotesAfterPageLoad()
 {
     let notes = localStorage.getItem("notes");
@@ -215,7 +219,7 @@ function displayNotesAfterPageLoad()
     
     notesSection.innerHTML = ``;
 
-    notesObj.forEach((item) => 
+    notesObj.forEach((item,index) => 
     {
         let string =    `   <div class="notedTitleText">${item.title}</div>
                                 
@@ -223,7 +227,7 @@ function displayNotesAfterPageLoad()
                             
                             <div class="noteManipulationMenu">
                                 <img src="images/notification-bell.png" >
-                                <img src="images/add-user.png" >
+                                <img src="images/delete.png" id = "${index}" onclick = "deleteNoteFromList(this.id)">
                                 <img src="images/palette.png">
                                 <img src="images/image.png">
                                 <img src="images/download-file.png">
@@ -235,4 +239,24 @@ function displayNotesAfterPageLoad()
         notesSection.appendChild(noteCardDiv);        
     })
     
+}
+
+// -----------------> Function To Delete Note <------------------ //
+function deleteNoteFromList(indexID)
+{
+    let notes = localStorage.getItem("notes");
+    if(notes == null)
+    {
+        notesObj = []
+    }
+    else
+    {
+        notesObj = JSON.parse(notes);
+    }
+
+    notesObj.splice(indexID,1);
+
+    localStorage.setItem("notes",JSON.stringify(notesObj));
+
+    displayNotesAfterPageLoad();
 }
