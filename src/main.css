@@ -598,4 +598,40 @@ main
     {
         display: none;
     }
+
+    #hamburgerMenu 
+    {
+        margin: 0px 5px 0px 5px;
+    }
+
+    #settingMenu i 
+    {
+        padding: 5px;
+    }
+
+    #sideBar
+    {
+        margin: 5px 0px 5px 8px;
+    }
+
+    .sideBarSections
+    {
+        padding: 8px 2px;
+    }
+
+    .sectionLogo
+    {
+        margin: 0px 12px;
+    }
+
+    #mainContent
+    {
+        left: 70px;
+        width: calc(100vw - 80px);
+    }
+
+    #closeNoteInput 
+    {
+        padding: 5px 5px;
+    }
 }
